@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projections</title>
+</head>
+<body>
+    <h1>In this project I learned how to display images in different projections</h1>
+        <p>By changing the Project Coordinate Reference System in the project properties, I was able to transform the shapefile into different world projections. I also used the Indicatrix plug-in to help visualize the effects and distortions of each projection.</p>
+    
+    <h2>WGS84 Projection</h2>
+    <h3>This projection is one that many of us are used to seeing. It appears to distort the shape of land masses as it goes closer to the poles. Overall this is a very common and standard projection.</h3>
+    <a href="./map images/wgs84.png">
+    <img src="./map images/wgs84.png" alt="WGS84" width='500px'>
+    </a>
+    <h2>Aitoff Projection</h2>
+    <h3>This projection appears to preserve the prime meridian as a straight line. It increasingly curves out the longitudinal lines as it moves outwards from the prime meridian.</h3>
+    <a href="./map images/aitoff.png">
+    <img src="./map images/aitoff.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>Pseudo-Mercator Projection</h2>
+    <h3>This projection is similar to the Mercator projection, except that it also distorts along longitudinal lines, whereas the Mercator projection only distorts along latitudinal lines. It seems as if it would be useful for visualizing the placement of individal countries or land masses.</h3>
+    <a href="./map images/psuedo.png">
+    <img src="./map images/psuedo.png" alt="Psuedo Mercator" width='500px'>
+    </a>
+    <h2>Sphere Winkel Projection</h2>
+    <h3>This projection appears to preserve the straightness of the prime meridian while relaying an elipsoid shape. It appears to do this by skewing cordinates in a diagonal direction, either away from or towards the prime meridian.</h3>
+    <a href="./map images/winkel.png">
+    <img src="./map images/winkel.png" alt="Winkel" width='500px'>
+    </a>
+    <h2>World Cylindrical Equal Area Projection</h2>
+    <h3>This projection appears to be a simple cylindrical projection. There appears to be a great deal of both longitudinal and latitudinal distortion as it gets closer to the poles. The equal area of the Indicatrix indicators appears to show that countries and land masses preserve their comparative area no matter their location on the projection.</h3>
+    <a href="./map images/cylindricalequalarea.png">
+    <img src="./map images/cylindricalequalarea.png" alt="Cylindrical" width='500px'>
+    </a>
+    <h2>World Equidistant Conic</h2>
+    <h3>This projection appears to be a fairly standard conic projection. It distorts a great deal as it moves away from the North Pole, but it appears to preserve latitudinal distance fairly well. There is, however, a large gap in the top. </h3>
+    <a href="./map images/equidistantconic.png">
+    <img src="./map images/equidistantconic.png" alt="North Pole" width='500px'>
+    </a>
+    <h2>North Pole Azimuthal Equidistant</h2>
+    <h3>This appears to be a projection centered on the North Pole and projecting outward (Southward) onto the rest of the globe. There appears to be similar distortion but a more complete picture compared to the previous projection. The gap appears much smaller, although still present. </h3>
+    <a href="./map images/azimuthAL.png">
+    <img src="./map images/azimuthAL.png" alt="North Pole" width='500px'>
+    
+    </a>
+    <h2>Van Der Grinten Projection</h2>
+    <h3>This projection is interesting because it appears to attempt to preserve very little. It preserves the general shapes of other projections (such as WSG84), but it does not preserve area. I like that it gives the general idea of a sphere though. </h3>
+    <a href="./map images/HW2VanDer.png">
+    <img src="./map images/HW2VanDer.png" alt="North Pole" width='500px'>
+   
+    </a>
+    <h2>Cassini Projection</h2>
+    <h3>I have very little idea as to what this projection is attempting to portray. After some research I figured out that it makes the central meridian act as the equator. Still, I'm not sure what you could gain from using this projection. </h3>
+    <a href="./map images/HW2Cassini.png">
+    <img src="./map images/HW2Cassini.png" alt="North Pole" width='500px'>
+
+    <h2>Data used for this project</h2>
+    <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
+
+</body>
+</html>
