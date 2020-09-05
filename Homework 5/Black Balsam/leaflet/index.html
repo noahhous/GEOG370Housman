@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Balsam Area Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+
+   <script src = "./data/trailhead.geojson"></script>
+   <script src = "./data/blackbalsam.geojson"></script>
+   <script src = "./data/tennentmountain.geojson"></script>
+   <script src = "./data/samknob.geojson"></script>
+   <script src = "./data/shiningrock2.geojson"></script>
+
+
+</head>
+<body>
+
+    <div id="mapid"></div>
+    <style>
+        #mapid{ width: 900px; height: 500px;}
+    </style>
+    
+    <script>
+        var map = L.map('mapid').setView([35.335787, -82.881181], 14);
+
+        L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {}).addTo(map)
+
+        var parking = L.icon({
+            iconUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Parking_icon.svg",
+            iconSize: [38, 38],
+        });
+
+        var binoculars = L.icon({
+            iconUrl: "http://www.myiconfinder.com/uploads/iconsets/256-256-072868cb7a7ac428247ea03731993f54-binoculars.png",
+            iconSize: [45, 45],
+        });
+
+        var mountain = L.icon({
+            iconUrl: "https://www.nicepng.com/png/full/3-31635_mountain-icon-mountain-icon-png.png",
+            iconSize: [45, 45],
+        });
+
+        var meadow = L.icon({
+            iconUrl: "https://www.pikpng.com/pngl/b/31-313694_progressive-rock-boulder-computer-icons-drawing-rock-clipart.png",
+            iconSize: [45, 45],
+        });
+
+
+        var trailheadPopup = "Trailhead<br/><img src='https://wncviewhikes.com/wp-content/uploads/2015/10/Sam-Knob-1-450x300_c.jpg'width='200px'/>";
+
+        L.geoJSON(trailhead, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: parking});}}) // c
+        .bindPopup(trailheadPopup) // d
+        .addTo(map); //
+
+        varBlackBalsamPopup = "Black Balsam Knob<br/><img src='https://www.romanticasheville.com/sites/default/files/images/basic_page/black-balsam-knob.jpg'width='200px'/>";
+
+        L.geoJSON(BlackBalsam, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: binoculars});}}) // c
+        .bindPopup(varBlackBalsamPopup) // d
+        .addTo(map); //
+
+        varTennentMountainPopup = "Tennent Mountain<br/><img src='https://photos.smugmug.com/Hikes-in-the-South/North-Carolina-Hikes/Pisgah-NF-Pisgah-District/Tennent-Mountain-NC/i-DcmrFxK/0/ed767cfc/L/IMG_0488-L.jpg'width='200px'/>";
+
+        L.geoJSON(tennentmountain, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: mountain});}}) // c
+        .bindPopup(varTennentMountainPopup) // d
+        .addTo(map); //
+
+        varSamKnob = "Sam Knob<br/><img src='https://ashevilletrails.com/wp-content/uploads/2018/02/sams-knob-trail-02.jpg'width='200px'/>";
+
+        L.geoJSON(samknob, { // a
+        pointToLayer: function (feature, latlng) { // b
+        return L.marker(latlng, {icon: meadow});}}) // c
+        .bindPopup(varSamKnob) // d
+        .addTo(map); //
+        
+        var myStyle = {
+            "color": "#ff7800",
+            "weight": 5,
+            "opacity": 0.65
+        };
+
+        var myStyle = {
+            "color": "#ff7800",
+            "weight": 5,
+            "opacity": 0.65
+        };
+
+
+        var myStyle = {
+            "color": "#ff7800",
+            "weight": 5,
+            "opacity": 0.65
+        };
+
+        varShiningRockPopup = "Shining Rock Wilderness<br/>";
+
+
+       L.geoJSON(bounds,{
+                style: myStyle
+            })
+            .bindPopup(varShiningRockPopup)
+            .addTo(map);
+
+
+
+        
+
+
+    </script>
+
+</body>
+</html>
