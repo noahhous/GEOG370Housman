@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Housman- Homework 10</title>
+</head>
+<body>
+<h1>Homework 10: Urgent Care Centers Proximate to the Appalachian Trail </h1>
+<h2>Noah Housman</h2>
+<div></div>
+<h3>For this assignment, I took a shapefile (a line) of the Appalachian Trail and created two buffers around it which indicate Urgent Care centers that are within 30 and 50 miles of the Trail. The essential question I answer is, "If I get a minor injury while hiking the Appalachian Trail, where are the closest Urgent Care centers that I can go to?" I also answered the more specific question of, "If I am limited to travelling 30 to 50 miles from the point along the Trail that I am injured, what are my options for Urgent Care centers?" I first created a 30 mile buffer around the trail center line. Then, I used the intersect tool, with the national database of Urgent Care centers as the input, to retain only the Urgent Care centers that fall within this buffer. Taking it a step further, I created a 50 mile buffer around the trail and used the difference tool to make it wrap around the 30 mile buffer without intersecting it. Within this new 50 mile buffer, I again used the intersect tool to retain the Urgent Care centers that are within 30 to 50 miles (but not closer than 30 miles). The result was a multi-tiered buffer with points inside that correspond only to their specific tier. </h2>
+<a href="./pl.png">
+    <img src="./pl.png" alt="my map" width="1000px">
+    </a>
+
+
+<h2>Data used for this project</h2>
+    <a href="https://irma.nps.gov/DataStore/Reference/Profile/1045368"> Appalachian Trail Centerline</a>
+    <p></p>
+    <a href="https://hifld-geoplatform.opendata.arcgis.com/datasets/urgent-care-facilities"> Urgent Care center locations</a>
+    <p></p>
+    
+</body></html>
